@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "893007884042",
+    "firebase_url": "https://flutter-ecc4c-default-rtdb.firebaseio.com",
+    "project_id": "flutter-ecc4c",
+    "storage_bucket": "flutter-ecc4c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:893007884042:android:739deb277dbbe8f37214f3",
+        "android_client_info": {
+          "package_name": "com.example.tp3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "893007884042-92c9rpkavgq7bdbhom5c7d7kls8495ep.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBG4N1FOXglBUvdqF1e3YZ5oTNnhuhrdEE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "893007884042-92c9rpkavgq7bdbhom5c7d7kls8495ep.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
