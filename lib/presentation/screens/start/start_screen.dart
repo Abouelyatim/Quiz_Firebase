@@ -1,25 +1,28 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:tp3/configs/AppColors.dart';
+import 'package:provider/provider.dart';
 import 'package:tp3/presentation/screens/home/home_screen.dart';
+
+import '../../../theme.dart';
 
 class StartScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        brightness: Brightness.dark,
-        primaryColor: AppColors.darkSlateGray,
-        accentColor: AppColors.dodgerBlue,
-        scaffoldBackgroundColor: AppColors.darkSlateGray,
-        fontFamily: GoogleFonts.oxygen().fontFamily,
-      ),
-      home: Scaffold(
-        body: SafeArea(
-          child: HomeScreen(),
-        ),
+    return ChangeNotifierProvider(
+      create: (_) => ThemeNotifier(),
+      child: Consumer<ThemeNotifier>(
+        builder: (context, ThemeNotifier notifier, child) {
+
+          return MaterialApp(
+            debugShowCheckedModeBanner: false,
+            theme: notifier.darkTheme ? dark : light,
+            home: Scaffold(
+              body: SafeArea(
+                child: HomeScreen(),
+              ),
+            ),
+          );
+        } ,
       ),
     );
   }
